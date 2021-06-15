@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/post_layout_bg">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgView_proPic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/light_grey"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgView_proPic"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frodo Sam"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/tv_postTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11 hrs"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_layout1"
+        android:text="Ideas are the keys..."
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_status"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+
+                android:src="@drawable/ic_baseline_favorite_24"/>
+            <TextView
+                android:id="@+id/tv_noOfLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="18"
+                android:textSize="13sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_NoOfComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 Comments"
+            android:textSize="13sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgView_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_grey"
+
+        android:layout_below="@+id/rel_layout2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgView_line">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_like"
+
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:insetBottom="0dp"
+            android:backgroundTint="@color/white"
+            android:elevation="20dp"
+            android:text="Like"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_baseline_favorite_border_24"
+
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:iconTint="@color/grey" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_comment"
+
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:insetBottom="0dp"
+            android:backgroundTint="@color/white"
+            android:elevation="20dp"
+            android:text="Comment"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_baseline_mode_comment_24"
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:iconTint="@color/grey" />
+
+    </LinearLayout>
+
+</RelativeLayout>

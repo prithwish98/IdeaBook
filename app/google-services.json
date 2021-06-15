@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "805932814523",
+    "project_id": "ideabook---share-your-thoughts",
+    "storage_bucket": "ideabook---share-your-thoughts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805932814523:android:1bfe461f1723ba9629599e",
+        "android_client_info": {
+          "package_name": "in.kgec.ideabook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805932814523-a7mo0ld2onbq96771fet4b8kft2ctin7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfZpW2tRjkWt6El0X1dGPPGzl2DTU0pes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805932814523-a7mo0ld2onbq96771fet4b8kft2ctin7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
