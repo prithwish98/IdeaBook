@@ -2,35 +2,29 @@ package in.kgec.ideabook.ui.home;
 
 import com.google.firebase.firestore.DocumentId;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Post {
     private String userName, status, img_UserDp_url;
+    ArrayList<String> likersList;
     @DocumentId
     private String documentId;
-    private int noOfLikes, noOfComments;
+    private int noOfComments;
     Date timeOfPost;
 
     public Post() {
 
     }
 
-    public Post(String userName, String status, String img_UserDp_url, String documentId, int noOfLikes, int noOfComments, Date timeOfPost) {
+    public Post(String userName, String status, String img_UserDp_url, ArrayList<String> likersList, String documentId, int noOfComments, Date timeOfPost) {
         this.userName = userName;
         this.status = status;
         this.img_UserDp_url = img_UserDp_url;
+        this.likersList = likersList;
         this.documentId = documentId;
-        this.noOfLikes = noOfLikes;
         this.noOfComments = noOfComments;
         this.timeOfPost = timeOfPost;
-    }
-
-    public String getDocumentId() {
-        return documentId;
-    }
-
-    public void setDocumentId(String documentId) {
-        this.documentId = documentId;
     }
 
     public String getUserName() {
@@ -57,12 +51,20 @@ public class Post {
         this.img_UserDp_url = img_UserDp_url;
     }
 
-    public int getNoOfLikes() {
-        return noOfLikes;
+    public ArrayList<String> getLikersList() {
+        return likersList;
     }
 
-    public void setNoOfLikes(int noOfLikes) {
-        this.noOfLikes = noOfLikes;
+    public void setLikersList(ArrayList<String> likersList) {
+        this.likersList = likersList;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
     }
 
     public int getNoOfComments() {
